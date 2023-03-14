@@ -1,0 +1,261 @@
+/* --------------------------------- */
+/* Vars                              */
+/* --------------------------------- */
+
+/*  ref              base        initial */
+/*   vw *  slope - length =     length */
+/* 1920 *   .002 -     16 =      12.16 */
+
+/* 1rem = 16px */
+/* 12.16 / 16 = .76rem */
+
+/* clamp avec pente .002 et 16px à 1920px vw */
+/* clamp(min, .76rem + .002vw, max) */
+
+:root {
+    --ref-ratio: 1;
+    --ref-base-length: 16;
+    --ref-slope: .002;
+    --ref-vw: 1920;
+    --ref-min-vw: 1366;
+    --ref-max-vw: 3840;
+
+    --initial-length: calc(var(--ref-vw) * var(--ref-slope) - var(var(--ref-base-length)));
+    --example: clamp(var(--ref-min-vw), calc(var(--initial-length) * ), var(--ref-max-vw));
+
+    /* 992-3840  */
+    /* --size-992-3840-4: clamp(2px, 0.2083334vw, 8px);
+    --size-992-3840-8: clamp(4px, 0.416667vw, 16px);
+    --size-992-3840-16: clamp(8px, 0.83334vw, 32px);
+    --size-992-3840-32: clamp(16px, 1.6667vw, 64px);
+    --size-992-3840-64: clamp(32px, 3.3334vw, 128px); */
+
+    /* -------------------------------------------- */
+    /* Typesetting                                  */
+    /* -------------------------------------------- */
+    /* Many variables affect readability and the overall balance of the design.
+    * Font family, font weight, letter spacing, line height and vertical margins are among the most
+    * important ones.
+    * ---------------------------------------------
+    * Properties of the font shorthand that are set in the Type scale are the following :
+    * font-style font-weight font-stretch font-size/line-height font-family.
+    * -------------------------------------------- 
+    * - Font pairing (combining fonts from different typefaces) has a huge impact on the overall design.
+    * Too many type sizes and styles at once can wreck any layout. A typographic scale has a limited
+    * set of type sizes that work well together along with the layout grid.
+    * These sizes and styles were developed to balance content density and reading comfort under typical
+    * usage conditions.
+    * ---------------------------------------------
+    * - Font size
+    * Font size can be defined with a type scale. Furthermore, it is advised to specify matching margins for each font-size.
+    * ---------------------------------------------
+    * - Font Weight
+    * Applying font weight is a good way to create a hierarchy in a text.
+    * It is possible to pair typefaces with different font weights to achieve great contrast between titles and text.
+    * ---------------------------------------------
+    * - Letter Spacing - Tracking
+    * Letter spacing is important because it gives the reader a sense of fluidity when reading.
+    * ---------------------------------------------
+    * - Pacing - Line Height (space between lines)
+    * To achieve proper readability and appropriate pacing, line heights have been determined based
+    * on each style’s individual size and weight.
+    * ---------------------------------------------
+    * - Pacing - Vertical Margins (space between text blocks)
+    * The idea of pacing is thightly linked to the space between text blocks.
+    * It is important to use fractional spacing to achieve some sort of consitency when appliying space between each block.
+    * ---------------------------------------------
+    * - Optical compensation - Horizontal Margins
+    * Negative margins are often needed to compensate the offset for larger type sizes.
+    * ---------------------------------------------
+    * - Colors and Contrast
+    * Contrast can be achieved with subtle color differences between titles and body text.
+    * ---------------------------------------------
+    * - Remarks - Line Length
+    * Consider this advice on readability and line length from the Baymard Institute:
+    * “You should have around 60 characters per line if you want a good reading experience.
+    * Having the right amount of characters on each line is key to the readability of your text.”
+    */
+
+    /* -------------------------------------------- */
+    /* Typesetting - Display vars                   */
+    /* -------------------------------------------- */
+    --display-font-family: "Neue Haas Grotesk Display Pro";
+    --display-font-weight: 600;
+    --display-font-style: normal;
+    --display-font-size-base: 220;
+    --display-font-size-scale: 1.125;
+
+    --display-font-size-0: var(--display-font-size-base);
+    --display-font-size-0-const: calc(var(--display-font-size-base) * 1px);
+    --display-font-size-0-line-height: 1;
+
+    --display-font-size-1: calc(var(--display-font-size-0) * var(--display-font-size-scale));
+    --display-font-size-1-const: calc(var(--display-font-size-0) * var(--display-font-size-scale) * 1px);
+    --display-font-size-1-line-height: 1;
+
+    --display-font-size-2: calc(var(--display-font-size-1) * var(--display-font-size-scale));
+    --display-font-size-2-const: calc(var(--display-font-size-1) * var(--display-font-size-scale) * 1px);
+    --display-font-size-2-line-height: 1;
+
+    /* -------------------------------------------- */
+    /* Typesetting - Primary (headings) vars        */
+    /* -------------------------------------------- */
+    --primary-font-family: "Neue Haas Grotesk Text Pro";
+    --primary-font-weight: 600;
+    --heading-font-weight: 400;
+    --primary-font-style: normal;
+    --primary-font-size-base: 22.5;
+    --primary-font-size-scale: 1.125;
+
+    --primary-font-size-0: var(--primary-font-size-base);
+    --primary-font-size-0-const: calc(var(--primary-font-size-base) * 1px);
+    --primary-font-size-0-line-height: 1.2;
+
+    --primary-font-size-1: calc(var(--primary-font-size-0) * var(--primary-font-size-scale));
+    --primary-font-size-1-const: calc(var(--primary-font-size-0) * var(--primary-font-size-scale) * 1px);
+    --primary-font-size-1-line-height: 1.2;
+
+    --primary-font-size-2: calc(var(--primary-font-size-1) * var(--primary-font-size-scale));
+    --primary-font-size-2-const: calc(var(--primary-font-size-1) * var(--primary-font-size-scale) * 1px);
+    --primary-font-size-2-line-height: 1.2;
+
+    --primary-font-size-3: calc(var(--primary-font-size-2) * var(--primary-font-size-scale));
+    --primary-font-size-3-const: calc(var(--primary-font-size-2) * var(--primary-font-size-scale) * 1px);
+    --primary-font-size-3-line-height: 1.2;
+
+    --primary-font-size-4: calc(var(--primary-font-size-3) * var(--primary-font-size-scale));
+    --primary-font-size-4-const: calc(var(--primary-font-size-3) * var(--primary-font-size-scale) * 1px);
+    --primary-font-size-4-line-height: 1.2;
+
+    --primary-font-size-5: calc(var(--primary-font-size-4) * var(--primary-font-size-scale));
+    --primary-font-size-5-const: calc(var(--primary-font-size-4) * var(--primary-font-size-scale) * 1px);
+    --primary-font-size-5-line-height: 1.2;
+
+    /* -------------------------------------------- */
+    /* Typesetting - Secondary (text) vars          */
+    /* -------------------------------------------- */
+    --secondary-font-family: "Neue Haas Grotesk Text Pro";
+    --secondary-font-weight: 400;
+    --secondary-font-style: normal;
+    --secondary-font-size-base: 14;
+    --secondary-font-size-scale: 1.125;
+
+    --secondary-font-size-0: var(--secondary-font-size-base);
+    --secondary-font-size-0-const: calc(var(--secondary-font-size-base) * 1px);
+    --secondary-font-size-0-line-height: 1.4;
+
+    --secondary-font-size-1: calc(var(--secondary-font-size-0) * var(--secondary-font-size-scale));
+    --secondary-font-size-1-const: calc(var(--secondary-font-size-0) * var(--secondary-font-size-scale) * 1px);
+    --secondary-font-size-1-line-height: 1.4;
+
+    --secondary-font-size-2: calc(var(--secondary-font-size-1) * var(--secondary-font-size-scale));
+    --secondary-font-size-2-const: calc(var(--secondary-font-size-1) * var(--secondary-font-size-scale) * 1px);
+    --secondary-font-size-2-line-height: 1.4;
+
+    --secondary-font-size-3: calc(var(--secondary-font-size-2) * var(--secondary-font-size-scale));
+    --secondary-font-size-3-const: calc(var(--secondary-font-size-2) * var(--secondary-font-size-scale) * 1px);
+    --secondary-font-size-3-line-height: 1.4;
+
+/* 
+
+
+
+    --length-1: clamp(9px, 0.98958333333333333333vw, 38px);
+    --length-2: clamp(1px, 1.25vw, 48px);
+
+    --size-992-2560-16: clamp(8px, 0.83333333333333333333vw, 21px);
+    --size-992-2560-18: clamp(9px, 0.9375vw, 24px);
+
+
+
+
+
+
+
+
+
+
+
+    --size-992-3840-16: clamp(8px, 0.83333333333333333333vw, 32px);
+    --size-992-3840-18: clamp(9px, 0.9375vw, 36px);
+
+    --size-992-2560-20: clamp(10px, 1.04166666666666666667vw, 26px);
+    --size-1200-2560-20: clamp(12px, 1.04166666666666666667vw, 26px);
+    --size-1400-2560-20: clamp(14px, 1.04166666666666666667vw, 26px);
+    --size-992-3840-20: clamp(10px, 1.04166666666666666667vw, 40px);
+    --size-992-2560-24: clamp(12px, 1.25vw, 32px);
+    --size-1200-2560-24: clamp(15px, 1.25vw, 32px);
+    --size-1400-2560-24: clamp(17px, 1.25vw, 32px);
+    --size-992-3840-24: clamp(12px, 1.25vw, 48px);
+    --size-1200-3840-24: clamp(15px, 1.25vw, 48px);
+    --size-1400-3840-24: clamp(17px, 1.25vw, 48px);
+    --size-992-2560-28: clamp(14px, 1.45833333333333333333vw, 37px);
+    --size-992-3840-28: clamp(14px, 1.45833333333333333333vw, 56px);
+    --size-992-2560-32: clamp(16px, 1.66666666666666666667vw, 42px);
+    --size-992-3840-32: clamp(16px, 1.66666666666666666667vw, 64px);
+    --size-992-2560-36: clamp(18px, 1.875vw, 48px);
+    --size-992-3840-36: clamp(18px, 1.875vw, 72px);
+    --size-992-2560-40: clamp(20px, 2.08333333333333333333vw, 53px);
+    --size-992-2560-40: clamp(20px, 2.08333333333333333333vw, 80px);
+    --size-992-2560-48: clamp(24px, 2.5vw, 64px);
+    --size-992-3840-48: clamp(24px, 2.5vw, 96px);
+    --size-992-2560-56: clamp(28px, 2.91666666666666666667vw, 74px);
+    --size-992-3840-56: clamp(28px, 2.91666666666666666667vw, 112px);
+    --size-992-2560-64: clamp(33px, 3.33333333333333333333vw, 85px);
+    --size-992-3840-64: clamp(33px, 3.33333333333333333333vw, 128px);
+ */
+
+}
+
+* {
+    --target-length: var(--target-length-1, --target-length);
+
+    --length: calc(var(--target-length) * 1px);
+    --min-ratio: calc(var(--ref-min-vw) / var(--ref-vw));
+    --min: calc(var(--min-ratio) * var(--length));
+    --max-ratio: calc(var(--ref-max-vw) / var(--ref-vw));
+    --max: calc(var(--max-ratio) * var(--length));
+    --target-ratio: calc(100 / var(--ref-vw));
+    --target-val: calc(var(--target-length) * var(--target-ratio));
+    --target: calc(var(--target-val) * 1vw);
+    
+    --length-2: calc(var(--target-length-2) * 1px);
+    --min-ratio-2: calc(var(--ref-min-vw) / var(--ref-vw));
+    --min-2: calc(var(--min-ratio-2) * var(--length-2));
+    --max-ratio-2: calc(var(--ref-max-vw) / var(--ref-vw));
+    --max-2: calc(var(--max-ratio-2) * var(--length-2));
+    --target-ratio-2: calc(100 / var(--ref-vw));
+    --target-val-2: calc(var(--target-length-2) * var(--target-ratio-2));
+    --target-2: calc(var(--target-val-2) * 1vw);
+}
+
+.test-advanced-clamp {
+    --ref-ratio: 1;
+    --ref-vw: 1920;
+    --ref-min-vw: 1366;
+    --ref-max-vw: 3840;
+
+    /* ------------------------ */
+
+    --length: calc(var(--target-length) * 1px);
+    --min-ratio: calc(var(--ref-min-vw) / var(--ref-vw));
+    --min: calc(var(--min-ratio) * var(--length));
+    --max-ratio: calc(var(--ref-max-vw) / var(--ref-vw));
+    --max: calc(var(--max-ratio) * var(--length));
+    --target-ratio: calc(100 / var(--ref-vw));
+    --target-val: calc(var(--target-length) * var(--target-ratio));
+    --target: calc(var(--target-val) * 1vw);
+
+    /* ------------------------ */
+    
+    --target-length: 16;
+    --target-slope: 0.02;
+    --target-slope-vw: calc(var(--target-slope) * 1vw);
+
+    /* ------------------------ */
+
+    --initial-length: calc(calc(var(--target-length) - var(--ref-vw) * var(--target-slope)) * 1px);
+    --example: clamp(var(--min), var(--initial-length) + var(--target-slope-vw), var(--max));
+
+    font-size: clamp(0px, calc(var(--initial-length)), 3840px)!important;
+}
