@@ -1,0 +1,46 @@
+.magnetic:hover {
+  color: white;
+}
+.magnetic-click {
+  position: relative;
+  /* height: 4.26rem; */
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-radius: 2.125em;
+}
+.magnetic-click.btn {
+  padding: 0 2.5rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.175);
+  overflow: hidden;
+}
+.magnetic-click.magnetic-normal .magnetic-overlay {
+  transform: translate(0, 0, 0) !important;
+}
+.magnetic-dark {
+  background-color: #121212;
+}
+.magnetic-dark .magnetic-text {
+  color: #fff !important;
+}
+.magnetic-overlay {
+    background: white;
+    color: black;
+    position: absolute;
+    width: 150%;
+    height: 200%;
+    border-radius: 50%;
+    top: -50%;
+    left: -25%;
+    transform: translate3d(0,-76%,0);
+    will-change: transform;
+    transition: background-color ease-in-out .25s;
+}
+.magnetic-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}

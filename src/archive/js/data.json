@@ -1,0 +1,149 @@
+{
+    "basepath": "img/dist/",
+    "galleries": [
+        {
+            "year": "2009",
+            "basepath": "2009/",
+            "images": [
+                {
+                    "basepath": "1 - Fabian Unternahrer - Den Kopf hinhaltend/",
+                    "filename": "FU_photo.ch.2.jpg",
+                    "author": "Fabian Unternäher",
+                    "title": "«&nbsp;Den Kopf hinhaltend&nbsp;»",
+                    "prix": "1er prix",
+                    "description": "Extrait d’une série inspirée par les peintures de la Renaissance dont le thème est le martyre du Christ."
+                },
+                {
+                    "basepath": "2 - Angel Bannwart - Dejeuners urbains/",
+                    "filename": "AB_dejeuners_urbains (1 of 6).jpg",
+                    "author": "Angel Bannwart",
+                    "title": "«&nbsp;Déjeuners urbains&nbsp;»",
+                    "prix": "2e prix",
+                    "description": "Extrait d’une série sur une tradition (le pique-nique dans la nature) déplacée dans un environnement inattendu."
+                },
+                {
+                    "basepath": "3 - Alfio Tommasini - Antonio & Paloma/",
+                    "filename": "AT_antonio&paloma 1.jpg",
+                    "author": "Alfio Tommasini",
+                    "title": "«&nbsp;Antonio & Paloma&nbsp;»",
+                    "prix": "3e prix",
+                    "description": "Extrait d’une série sur un couple de Roms."
+                },
+                {
+                    "basepath": "Jury Award - Lionel Henriod - Tryptique Tolerare/",
+                    "filename": "LH_1.jpg",
+                    "author": "Lionel Henriod",
+                    "title": "«&nbsp;Triptyque Tolerare&nbsp;»",
+                    "prix": "Prix du jury",
+                    "description": "Extrait d’une série sur le silence de victimes d’actes de violence."
+                }
+            ]
+        },
+        {
+            "year": "2011",
+            "basepath": "2011/",
+            "images": [
+                {
+                    "basepath": "1 - Verona Rousset - Waska Tatay/",
+                    "filename": "waska_tatay_01.jpg",
+                    "author": "Raphaël Verona & Thomas&nbsp;Rousset",
+                    "title": "«&nbsp;Waska Tatay&nbsp;»",
+                    "prix": "1er prix",
+                    "description": "Extrait d’une série sur la Bolivie et la tradition littéraire du « réalisme magique ». "
+                },
+                {
+                    "basepath": "2 - Julien Berberat - Les manchards/",
+                    "filename": "img_2.jpg",
+                    "author": "Julien Berberat",
+                    "title": "«&nbsp;Les manchards»",
+                    "prix": "2e prix",
+                    "description": "Extrait d’une série sur les interdictions de mendier à Genève."
+                },
+                {
+                    "basepath": "3 - Matthieu Gafsou - Terres compromises/",
+                    "filename": "Sans titre 9.jpg",
+                    "author": "Matthieu Gafsou",
+                    "title": "«&nbsp;Terres compromises&nbsp;»",
+                    "prix": "3e prix",
+                    "description": "Extrait d’une série sur le Moyen-Orient (Israël, Territoires occupés, Jordanie)."
+                },
+                {
+                    "basepath": "Jury Award - Stephanie Meylan - Le voyage d'Hyperman/",
+                    "filename": "Hyperman01.jpg",
+                    "author": "Stéphanie Meylan",
+                    "title": "«&nbsp;Le voyage d'Hyperman&nbsp;»",
+                    "prix": "Prix du jury",
+                    "description": "Extrait d’une série sur un hyper-héros qui tente de prendre son envol."
+                }
+            ]
+        },
+        {
+            "year": "2013",
+            "basepath": "2013/",
+            "images": [
+                {
+                    "basepath": "1 - Marco Zanoni - Imagination/",
+                    "filename": "01_Verkleidung_MarcoZanoni.jpg",
+                    "author": "Marco Zanoni",
+                    "title": "«&nbsp;Imagination&nbsp;»",
+                    "prix": "1er prix",
+                    "description": "Extrait d’une série sur l’univers fantastique des enfants."
+                },
+                {
+                    "basepath": "2 - Nadja Kilchhofer - Punkt ch (ECAL)/",
+                    "filename": "Kilchhofernadja_PUNKTCH_01.jpg",
+                    "author": "Nadja Kilchhofer",
+                    "title": "«&nbsp;Punkt ch&nbsp;»",
+                    "prix": "2e prix",
+                    "description": "Extrait d’une série sur une Suisse prise entre les univers d’Heidi et du XXIe siècle."
+                },
+                {
+                    "basepath": "3 - Fabian Biasio - Lost in Translation/",
+                    "filename": "irak005.jpg",
+                    "author": "Fabian Biasio",
+                    "title": "«&nbsp;Lost in translation&nbsp;»",
+                    "prix": "3e prix",
+                    "description": "Extrait d’une série sur le quotidien de travailleurs immigrés dans une base militaire à Bagdad."
+                },
+                {
+                    "basepath": "Jury Award - Sprecher & Cortellini - Freitzeitfreunde/",
+                    "filename": "Gemeindefeuerwehr.jpg",
+                    "author": "Sprecher & Cortellini",
+                    "title": "«&nbsp;Freizeitfreunde»",
+                    "prix": "Prix du jury",
+                    "description": "Extrait d’une série sur des bénévoles qui s’engagent sur leur temps libre pour une cause commune."
+                }
+            ]
+        },
+        {
+            "year": "2015",
+            "basepath": "2015/",
+            "images": [
+                {
+                    "basepath": "1st + Prix du public - Niels Ackermann/",
+                    "filename": "NAK_9117.jpg",
+                    "author": "Niels Ackermann",
+                    "title": "«&nbsp;L’Ange blanc&nbsp;»",
+                    "prix": "1er prix et prix du public",
+                    "description": "Extrait d’une série sur la jeunesse de Slavutych, ville ukrainienne située près de Tchernobyl."
+                },
+                {
+                    "basepath": "Prix des nouveaux talents - Sonja Berta/fondation-suisse-jpg/",
+                    "filename": "hungrywomeneatmoresalad-sonjaberta2.jpg",
+                    "author": "Sonja Berta",
+                    "title": "«&nbsp;Hungry women eat more salad&nbsp;»",
+                    "prix": "Prix des nouveaux talents",
+                    "description": "Extrait d’une série sur les mannequins et l’enjeu des désordres alimentaires."
+                },
+                {
+                    "basepath": "Prix des phptpgragphes professionnels - Braschler & Fischer/",
+                    "filename": "Ayub Mohammed_ISN 279_ChineseUighur.jpg",
+                    "author": "Braschler & Fischer",
+                    "title": "«&nbsp;Guantanamo&nbsp;»",
+                    "prix": "Prix des photographes professionnels",
+                    "description": "Extrait d’une série sur des ex-prisonniers de la prison américaine de Guantanamo."
+                }
+            ]
+        }
+    ]
+}

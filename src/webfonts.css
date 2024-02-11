@@ -1,0 +1,16 @@
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=bb3c1035-aada-469d-b361-a27bbd9be1f7&fontids=825376,825382,825430");
+@font-face{
+    font-family:"Neue Haas Grotesk Text Pro";
+    src:url("webfonts/825376/a14594bf-73de-4b5f-9792-9566994a021d.woff2") format("woff2"),url("Fonts/825376/bb4a10bb-155d-4c1a-a813-c65e10fac36c.woff") format("woff");
+    font-weight: 400;
+}
+@font-face{
+    font-family:"Neue Haas Grotesk Text Pro";
+    src:url("webfonts/825382/34ae0cd2-c49c-4df4-8270-fcda21c1b715.woff2") format("woff2"),url("Fonts/825382/9e666926-4bc9-4013-849e-dffa25a41dbd.woff") format("woff");
+    font-weight: 500;
+}
+@font-face{
+    font-family:"Neue Haas Grotesk Display Pro";
+    src:url("webfonts/825430/c24b7456-b9fe-40ab-94af-ba8d3025fada.woff2") format("woff2"),url("Fonts/825430/da47ecd2-feea-403e-b247-9f8f5bb5157b.woff") format("woff");
+    font-weight: 600;
+}

@@ -1,0 +1,138 @@
+:root {
+  --ref-vw: 1920;
+  --ref-min-vw: 1920;
+  --ref-max-vw: 2560;
+  --ref-slope: 0.02;
+  
+  /* -------------------------------------------- */
+  /* Typesetting - Primary (headings) vars        */
+  /* -------------------------------------------- */
+  --primary-font-family: "Helvetica", sans-serif;
+  --primary-font-weight: 600;
+  --primary-font-style: normal;
+  --primary-font-size-base: 32;
+  --primary-font-size-scale: 1.125;
+
+  --primary-font-size-0: var(--primary-font-size-base);
+  --primary-font-size-0-const: calc(var(--primary-font-size-base) * 1px);
+  --primary-font-size-0-line-height: 1.2;
+
+  --primary-font-size-1: calc(var(--primary-font-size-0) * var(--primary-font-size-scale));
+  --primary-font-size-1-const: calc(var(--primary-font-size-0) * var(--primary-font-size-scale) * 1px);
+  --primary-font-size-1-line-height: 1.2;
+
+  --primary-font-size-2: calc(var(--primary-font-size-1) * var(--primary-font-size-scale));
+  --primary-font-size-2-const: calc(var(--primary-font-size-1) * var(--primary-font-size-scale) * 1px);
+  --primary-font-size-2-line-height: 1.2;
+
+  --primary-font-size-3: calc(var(--primary-font-size-2) * var(--primary-font-size-scale));
+  --primary-font-size-3-const: calc(var(--primary-font-size-2) * var(--primary-font-size-scale) * 1px);
+  --primary-font-size-3-line-height: 1.2;
+
+  --primary-font-size-4: calc(var(--primary-font-size-3) * var(--primary-font-size-scale));
+  --primary-font-size-4-const: calc(var(--primary-font-size-3) * var(--primary-font-size-scale) * 1px);
+  --primary-font-size-4-line-height: 1.2;
+
+  --primary-font-size-5: calc(var(--primary-font-size-4) * var(--primary-font-size-scale));
+  --primary-font-size-5-const: calc(var(--primary-font-size-4) * var(--primary-font-size-scale) * 1px);
+  --primary-font-size-5-line-height: 1.2;
+  
+  /* -------------------------------------------- */
+  /* Typesetting - Secondary (text) vars          */
+  /* -------------------------------------------- */
+  --secondary-font-family: "Helvetica", sans-serif;
+  --secondary-font-weight: 400;
+  --secondary-font-style: normal;
+  --secondary-font-size-base: 18;
+  --secondary-font-size-scale: 1.125;
+
+  --secondary-font-size-0: var(--secondary-font-size-base);
+  --secondary-font-size-0-const: calc(var(--secondary-font-size-base) * 1px);
+  --secondary-font-size-0-line-height: 1.4;
+
+  --secondary-font-size-1: calc(var(--secondary-font-size-0) * var(--secondary-font-size-scale));
+  --secondary-font-size-1-const: calc(var(--secondary-font-size-0) * var(--secondary-font-size-scale) * 1px);
+  --secondary-font-size-1-line-height: 1.4;
+
+  --secondary-font-size-2: calc(var(--secondary-font-size-1) * var(--secondary-font-size-scale));
+  --secondary-font-size-2-const: calc(var(--secondary-font-size-1) * var(--secondary-font-size-scale) * 1px);
+  --secondary-font-size-2-line-height: 1.4;
+
+  --secondary-font-size-3: calc(var(--secondary-font-size-2) * var(--secondary-font-size-scale));
+  --secondary-font-size-3-const: calc(var(--secondary-font-size-2) * var(--secondary-font-size-scale) * 1px);
+  --secondary-font-size-3-line-height: 1.4;
+}
+
+* {
+  --length: calc(var(--target-length) * 1px);
+  --ref-slope-vw: calc(var(--ref-slope) * 1vw);
+  --initial-length: calc(calc(var(--target-length) - var(--ref-vw) * var(--ref-slope)) * 1px);
+  
+  --min-ratio: calc(var(--ref-min-vw) / var(--ref-vw));
+  --min: calc(var(--min-ratio) * var(--length));
+  --max-ratio: calc(var(--ref-max-vw) / var(--ref-vw));
+  --max: calc(var(--max-ratio) * var(--length));
+  --target-ratio: calc(100 / var(--ref-vw));
+  --target-val: calc(var(--target-length) * var(--target-ratio));
+  --target: calc(var(--target-val) * 1vw);
+  --target-slope: calc(var(--initial-length) + var(--ref-slope-vw));
+}
+
+/* Headings */
+h1, .h1 {
+    --target-length: var(--primary-font-size-5);
+    /* font-size: clamp(var(--min), var(--target), var(--max))!important; */
+    font: var(--primary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--primary-font-size-0-line-height) var(--primary-font-family);
+}
+
+h2, .h2 {
+    --target-length: var(--primary-font-size-4);
+    font: var(--primary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--primary-font-size-1-line-height) var(--primary-font-family);
+}
+
+h3, .h3 {
+    --target-length: var(--primary-font-size-3);
+    font: var(--primary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--primary-font-size-2-line-height) var(--primary-font-family);
+}
+
+h4, .h4 {
+    --target-length: var(--primary-font-size-2);
+    font: var(--primary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--primary-font-size-3-line-height) var(--primary-font-family);
+}
+
+h5, .h5 {
+    --target-length: var(--primary-font-size-1);
+    font: var(--primary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--primary-font-size-4-line-height) var(--primary-font-family);
+}
+
+h6, .h6 {
+    --target-length: var(--primary-font-size-0);
+    font: var(--primary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--primary-font-size-5-line-height) var(--primary-font-family);
+}
+
+p {
+  --target-length: var(--secondary-font-size-0);
+  --flow-space: 2em;
+    font: var(--secondary-font-weight) clamp(var(--min), var(--target), var(--max)) / var(--secondary-font-size-0-line-height) var(--secondary-font-family);
+}
+
+.stack > * + * {
+  margin-block-start: 4rem;
+  border: 2px solid green;
+  background: rgba(0, 255, 0, .06);
+}
+.flow > * + * {
+  margin-block-start: var(--flow-space, .5em);
+  border: 2px solid red;
+  background: rgba(255, 0, 0, .06);
+}
+.flow > * + p {
+  margin-block-start: var(--flow-space, .125em);
+  border: 2px solid blue;
+  background: rgba(0, 0, 255, .06);
+}
+
+/* Juste pour l'exemple */
+p {
+  max-width: 65ch;
+}

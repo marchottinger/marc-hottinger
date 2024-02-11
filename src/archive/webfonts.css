@@ -1,0 +1,31 @@
+@font-face {
+    font-display: swap;
+    font-family: "SuisseIntl";
+    src: url(./webfonts/SuisseIntl-Light-WebM.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "SuisseIntl";
+    src: url(./webfonts/SuisseIntl-Regular-WebM.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "SuisseIntl";
+    src: url(./webfonts/SuisseIntl-Medium-WebM.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "SuisseIntl";
+    src: url(./webfonts/SuisseIntl-Bold-WebM.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal
+}
